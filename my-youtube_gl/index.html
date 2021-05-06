@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <button class="menu-button">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    <img src="img/logo.svg" alt="Youtube Logo" class="logo">
+    <form class="input-group">
+      <input type="search" name="search" class="input-search" placeholder="Search">
+      <button type="submit" class="button-search">
+        <svg class="icon icon-search" width="19" height="19">
+          <use href="img/icons.svg#search"></use>
+        </svg>
+      </button>
+    </form>
+    <div class="mobile-search">
+      <svg class="icon icon-search" width="19" height="19">
+        <use href="img/icons.svg#search"></use>
+      </svg>
+    </div>
+    <div class="icons">
+      <a href="#" class="icons-link">
+        <svg class="icon icon-video" width="27" height="20">
+          <use href="img/icons.svg#video"></use>
+        </svg>
+      </a>
+      <a href="#" class="icons-link">
+        <svg class="icon icon-apps" width="21" height="21">
+          <use href="img/icons.svg#apps"></use>
+        </svg>
+      </a>
+      <a href="#" class="icons-link">
+        <svg class="icon icon-notification" width="22" height="26">
+          <use href="img/icons.svg#notification"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="auth">
+      <button class="auth-btn"><span class="auth-btn-text">ВОЙТИ</span></button>
+      <img src="img/avatar.jpeg" alt="Артем Исламов" class="user-avatar hide">
+    </div>
+    </div>
+    <div class="auth">
+      <button class="auth-btn"><span class="auth-btn-text">РЕГИСТРАЦИЯ</span></button>
+      <img src="img/avatar.jpeg" alt="Артем Исламов" class="user-avatar hide">
+    </div>
+<div id="id01" class="modal">
+<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть Modal">&times;</span>
+<form class="modal-content" action="../action_page.php">
+<div class="container">
+<h1>Регистрация</h1>
+<p>Please fill in this form to create an account.</p>
+<hr>
+<label for="email"><b>Email</b></label>
+<input type="text" placeholder=" Ведите Email" name="email" required>
+
+<label for="psw"><b>Пароль</b></label>
+<input type="password" placeholder=" Ведите пароль" name="psw" required>
+
+<label>
+<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Запомнить меня
+</label>
+
+<p>Создавая учетную запись, вы соглашаетесь с нашим <a href="#" style="color:dodgerblue">Условием и конфиденциальностью</a>.</p>
+
+<div class="clearfix">
+<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Отменить</button>
+<button type="submit" class="signupbtn">Регистрация</button>
+</div>
+</div>
+</form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+modal.style.display = "none";
+}
+}
+</script>
+    <!-- /.user -->
+  </header>
+  <div class="mobile-sidebar">
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <svg class="icon icon-home" width="20" height="19">
+            <use href="img/icons.svg#home"></use>
+          </svg>
+          <span class="nav-text">Главная</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <svg class="icon icon-trending" width="20" height="19">
+            <use href="img/icons.svg#trending"></use>
+          </svg>
+          <span class="nav-text">Tренды</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <svg class="icon icon-subscriptions" width="20" height="19">
+            <use href="img/icons.svg#subscriptions"></use>
+          </svg>
+          <span class="nav-text">Подписки</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <svg class="icon icon-library" width="20" height="19">
+            <use href="img/icons.svg#liked"></use>
+          </svg>
+          <span class="nav-text">Liked</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="container flex-box">
+    <aside class="sidebar">
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <svg class="icon icon-home" width="20" height="19">
+                <use href="img/icons.svg#home"></use>
+              </svg>
+              <span class="nav-text">Главная</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <svg class="icon icon-trending" width="20" height="19">
+                <use href="img/icons.svg#trending"></use>
+              </svg>
+              <span class="nav-text">Тренды</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <svg class="icon icon-subscriptions" width="20" height="19">
+                <use href="img/icons.svg#subscriptions"></use>
+              </svg>
+              <span class="nav-text">Подписки</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav-menu nav-menu-more">
+          <li class="nav-item">
+            <a href="#" class="nav-link show-more">
+              <svg class="icon icon-chevron-down" width="20" height="19">
+                <use href="img/icons.svg#chevron-down"></use>
+              </svg>
+              <span class="nav-text">Больше</span>
+            </a>
+          </li>
+          <li class="nav-item nav-item-hide">
+            <a href="#" class="nav-link">
+              <svg class="icon icon-liked" width="20" height="19">
+                <use href="img/icons.svg#liked"></use>
+              </svg>
+              <span class="nav-text">Понравившиеся видео</span>
+            </a>
+          </li>
+          <li class="nav-item nav-item-hide">
+            <a href="#" class="nav-link">
+              <svg class="icon icon-music" width="20" height="19">
+                <use href="img/icons.svg#music"></use>
+              </svg>
+              <span class="nav-text">Музыка</span>
+            </a>
+          </li>
+          <li class="nav-item nav-item-hide">
+            <a href="#" class="nav-link">
+              <svg class="icon icon-games" width="20" height="19">
+                <use href="img/icons.svg#games"></use>
+              </svg>
+              <span class="nav-text">Игры</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <h2 class="nav-title">Подписчики</h2>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <img src="img/Gussie.png" alt="Photo: Gussie Singleton" class="nav-image">
+            <span class="nav-text">Анастасия Самбурская</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <img src="img/Nora.png" alt=Nora Francis" class="nav-image">
+            <span class="nav-text">Гульнара Растаевская</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <img src="img/Belle.png" alt="Belle Briggs" class="nav-image">
+            <span class="nav-text">Алина Кожемякина</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <img src="img/Eunice.png" alt="Eunice Cortez" class="nav-image">
+            <span class="nav-text">Ольга Ставскаева</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <img src="img/Emma.png" alt="Emma Hanson" class="nav-image">
+            <span class="nav-text">Зарра Ларсон</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <img src="img/Leah.png" alt="Leah Berry" class="nav-image">
+            <span class="nav-text">Виктория Ленгард</span>
+          </a>
+        </li>
+      </ul>
+
+
+    </aside>
+    <main class="content">
+      <div class="channel">
+        <div class="channel-header">
+          <a href="#" class="channel-title">
+            <img src="img/glo.png" alt="Glo Academy" class="channel-avatar">
+            <span class="channel-text">PopSport</span>
+          </a>
+
+
+        </div>
+
+
+        <div class="glo-academy-list video-list">
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video youtube-modal" href="https://www.youtube.com/watch?v=raZR0SUNSxk">
+                <img src="img/01.jpg" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Качаем попу дома. Тренировка для ягодиц и ног | PopSport</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">1 days ago</span>
+              </span>
+              <span class="video-channel">PopSport</span>
+            </div>
+            <!-- /.video-info -->
+            <!-- /.video-card -->
+          </div>
+
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video youtube-modal" href="https://www.youtube.com/watch?v=e1GbGNYIGB4">
+                <img src="img/02.jpg" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Тренировка на все тело для новичков | Пресс, ягодицы, ноги, спина, руки | PopSport
+            </h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">1 months ago</span>
+              </span>
+              <span class="video-channel">PopSport</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video youtube-modal" href="https://www.youtube.com/watch?v=anxm4n5BsjM">
+                <img src="img/03.jpg" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Танцевальная тренировка на все тело. Танцы для похудения дома | PopSport</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">1 week ago</span>
+              </span>
+              <span class="video-channel">PopSport</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video youtube-modal" href="https://www.youtube.com/watch?v=Ac931c5LbCk">
+                <img src="img/04.jpg" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Тренировка на пресс дома. Плоский живот за 11 минут в день. Упражнения для пресса | PopSport</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">6 months ago</span>
+              </span>
+              <span class="video-channel">PopSport</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video youtube-modal" href="https://www.youtube.com/watch?v=PXZGdmhC5iM">
+                <img src="img/05.jpg" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Тренировка на руки для девушек. Упражнения для рук | PopSport</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">8 days ago</span>
+              </span>
+              <span class="video-channel">PopSport</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video youtube-modal" href="https://www.youtube.com/watch?v=4Ex6if5OZ_A">
+                <img src="img/06.jpg" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Тренировка на все тело для продвинутых. 30 минут упражнений на все тело дома | PopSport</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">3 days ago</span>
+              </span>
+              <span class="video-channel">PopSport</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="channel recommended">
+        <div class="channel-header">
+          <h2 class="recommended-title">Trending</h2>
+
+
+        </div>
+
+        <div class="trending-list  video-list">
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/Dude.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <h3 class="video-title">Dude You Re Getting A Telescope</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-views">80k views</span>
+                <span class="video-date">3 days ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/Moon.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <h3 class="video-title">Moon Gazing</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-views">123k views</span>
+                <span class="video-date">1 months ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/Rose.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Rose Gazing</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-views">43k views</span>
+                <span class="video-date">12 days ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/video-cover-4.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Telescopes 101</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-views">11k views</span>
+                <span class="video-date">6 months ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/video-cover-5.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Medical Care Is Just</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-views">80k views</span>
+                <span class="video-date">2 days ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/video-cover-6.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">A Brief History Of Creation</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-views">80k views</span>
+                <span class="video-date">3 days ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+      <div class="channel recommended-channel">
+        <div class="channel-header">
+          <a href="#" class="channel-title recommended-channel-title">
+            <img src="img/Food-Drink.png" alt="Music" class="channel-avatar">
+            <span class="channel-text">Music</span>
+          </a>
+
+        </div>
+
+
+        <div class="music-list  video-list">
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/Astronomy.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Astronomy Or Astrology</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">3 days ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/video-cover-5.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Advertising Outdoors</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">1 months ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/Radio.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Radio Astronomy</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">12 days ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/Autoresponder.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">A Good Autoresponder</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">6 months ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/Baby.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Baby Monitor Technology</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">2 days ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <a class="link-video" href="#">
+                <img src="img/Asteroids.png" alt="" class="thumbnail">
+              </a>
+
+            </div>
+            <!-- /.video-thumb -->
+            <h3 class="video-title">Asteroids</h3>
+            <div class="video-info">
+              <span class="video-counter">
+                <span class="video-date">3 days ago</span>
+              </span>
+              <span class="video-channel">Dollie Blair</span>
+            </div>
+            <!-- /.video-info -->
+          </div>
+
+        </div>
+      </div>
+
+
+    </main>
+  </div>
+  <!-- /.container -->
+
+</body>
+
+</html>
